@@ -1,4 +1,4 @@
-# docker-stack_web
+# docker : stack_web
 ## how to
 
  1. **clone repo :** *git clone https://github.com/dev-a/docker-stack_web.git*
