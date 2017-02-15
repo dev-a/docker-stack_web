@@ -1,0 +1,33 @@
+version: '2'
+
+services:
+    nginx:
+      image: nginx
+      container_name: nginx
+      ports:
+        - "8000:80"
+      volumes:
+        - ./nginx/site.conf:/etc/nginx/conf.d/default.conf
+      volumes_from:
+      - php
+
+    php:
+      image: php:fpm
+      container_name: php
+      ports:
+        - "80:80"
+      volumes:
+        - ./php/:/var/www/html/
+
+
+    mariadb:
+      image: mariadb
+      container_name: mariadb
+      ports:
+        - "3306:3306"
+      volumes:
+        - ./mysql:/var/lib/mysql
+        - ./code:/code
+      environment:
+        MYSQL_USER : root
+        MYSQL_ROOT_PASSWORD: root
