@@ -12,14 +12,16 @@ services:
       - php
 
     php:
-      image: php:fpm
+      build:    
+        context: ./dockerfile
+        dockerfile: phpplus
+      image: dev-a/phpplus
       container_name: php
       ports:
         - "80:80"
       volumes:
         - ./php/:/var/www/html/
-
-
+        
     mariadb:
       image: mariadb
       container_name: mariadb
