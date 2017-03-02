@@ -6,4 +6,4 @@
  3. **Start development :** *your www folder is : the php folder : ./php*
 
 ##Tips
- - use mariadb for database host on you php script
+ - use "*mariadb*" for database host on you php script
