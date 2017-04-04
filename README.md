@@ -5,5 +5,5 @@
  2. **run docker composer :** *docker-compose up -d*
  3. **Start development :** *your www folder is : the php folder : ./php*
 
-##Tips
+## Tips
  - use "*mariadb*" for database host on you php script
